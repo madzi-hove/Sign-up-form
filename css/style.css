@@ -56,8 +56,9 @@ input:required:invalid + span::after {
 }
 
 button {
-	background-color: #596d48;
+	background-color: rgb(89, 109, 72);
 	padding: 10px 30px;
+	border: none;
 	cursor: pointer;
 }
 
@@ -107,6 +108,10 @@ button {
 
 .mobile-sign-up button {
 	margin: 0 auto;
+}
+
+.mobile-sign-up button:hover {
+	background-color: rgb(105, 127, 86);
 }
 
 .log-in-text {
