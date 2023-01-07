@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,100&display=swap");
+
+@font-face {
+	font-family: "norsebold";
+	src: url("../fonts/norse-bold-webfont.woff2") format("woff2"),
+		url("../fonts/norse-bold-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 1rem "Roboto", sans-serif;
+	min-width: 360px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+button,
+label,
+input {
+	display: block;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+input {
+	padding: 0;
+	border: 0;
+	box-shadow: inset 1px 1px 3px #ccc;
+	border: 2px solid silver;
+}
+
+input:hover,
+input:focus {
+	background-color: #eee;
+	border: 1px solid blue;
+	outline: none;
+}
+
+input:required:invalid + span::after {
+	font-size: 0.7rem;
+	position: absolute;
+	content: "required";
+	color: white;
+	background-color: black;
+	padding: 5px 10px;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #596d48;
+	padding: 10px 30px;
+	cursor: pointer;
+}
+
+.container__item {
+	flex: 1;
+}
+
+.image {
+	position: relative;
+	background: center / cover no-repeat
+		url(../images/halie-west-25xggax4bSA-unsplash.jpg);
+}
+
+.logo-container {
+	position: absolute;
+	top: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+	height: 10rem;
+}
+
+.logo-text {
+	color: #fff;
+	margin: 0;
+	font: 8rem "norsebold", cursive, sans-serif;
+}
+
+.mobile-text-container {
+	position: absolute;
+	top: 45%;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-text-container p {
+	padding: 1rem;
+}
+
+.mobile-text-container p:nth-child(2) {
+	text-align: center;
+}
+
+.mobile-sign-up button {
+	margin: 0 auto;
+}
+
+.log-in-text {
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.log-in-text a {
+	color: #000;
+	text-decoration: none;
+}
+
+.image-credit {
+	position: absolute;
+	color: #fff;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.image-credit a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 414px) {
+	body {
+		background-color: #f09a9d; /* Red */
+	}
+
+	.content {
+		display: none;
+	}
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 415px) and (max-width: 960px) {
+	body {
+		background-color: #f5cf8e; /* Yellow */
+	}
+
+	.mobile-text-container {
+		display: none;
+	}
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+	body {
+		background-color: #b2d6ff; /* Blue */
+	}
+}
