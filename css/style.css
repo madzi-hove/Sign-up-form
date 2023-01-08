@@ -141,6 +141,28 @@ button {
 	text-decoration: none;
 }
 
+.content {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.close-btn.hidden {
+	display: none;
+}
+
+.presentation__text {
+	text-align: center;
+	max-width: 65%;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.form__heading {
+	text-align: center;
+}
+
 .section {
 	display: flex;
 	flex-wrap: wrap;
@@ -152,6 +174,7 @@ button {
 
 .section__item {
 	position: relative;
+	margin-right: 0.5rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -173,12 +196,24 @@ input.invalid {
 
 /* Mobile Styles */
 @media only screen and (max-width: 414px) {
-	.content {
+	.content.hidden,
+	.mobile-text-container.hidden,
+	.mobile-sign-up.hidden,
+	.image.hidden,
+	.presentation__text.hidden {
 		display: none;
 	}
+
 	.log-in-text a {
 		color: #fff;
 		text-decoration: none;
+	}
+
+	.close-btn {
+		position: absolute;
+		width: 40px;
+		top: 2rem;
+		right: 2rem;
 	}
 }
 
