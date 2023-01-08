@@ -109,11 +109,7 @@ button {
 	text-align: center;
 }
 
-/* .mobile-sign-up button {
-	margin: 0 auto;
-} */
-
-.mobile-sign-up button:hover {
+button:hover {
 	background-color: rgb(105, 127, 86);
 }
 
@@ -185,12 +181,6 @@ input.valid {
 }
 
 input.invalid {
-	border: 1px solid red;
-}
-
-.strength {
-	display: flex;
-	flex-flow: wrap;
 	border: 1px solid red;
 }
 
