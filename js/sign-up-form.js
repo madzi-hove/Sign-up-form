@@ -89,10 +89,39 @@ function checkPwdValidity(value) {
 	} else invalid = false;
 }
 
+// Check password validation
+function checkConfirmPwd(value) {
+	const pwdConfirm = document.querySelector("#pwd-confirm");
+
+	if (value !== pwd.value) {
+		pwdConfirm.classList.add("invalid");
+	} else {
+		pwdConfirm.classList.remove("invalid");
+		pwdConfirm.classList.add("valid");
+	}
+
+	if (value === "") {
+		pwdConfirm.classList.remove("invalid");
+		pwdConfirm.classList.remove("valid");
+		invalid = true;
+	}
+
+	if (pwdConfirm.classList.contains("invalid")) {
+		invalid = true;
+	} else invalid = false;
+}
+
 window.addEventListener("load", () => {
 	form.addEventListener("input", (e) => {
 		if (e.target.id === "firstname") checkName(e.target.value);
 		if (e.target.id === "mail") checkEmail(e.target.value);
 		if (e.target.id === "pwd") checkPwdValidity(e.target.value);
+		if (e.target.id === "pwd-confirm") checkConfirmPwd(e.target.value);
+	});
+
+	submitBtn.addEventListener("click", (e) => {
+		if (invalid === true) {
+			e.preventDefault();
+		}
 	});
 });
