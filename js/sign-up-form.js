@@ -63,9 +63,36 @@ function checkEmail(value) {
 	} else invalid = false;
 }
 
+// Password validation
+function checkPwdValidity(value) {
+	const pattern = /^([a-z]){8,}$/;
+
+	if (value.match(pattern)) {
+		if (pwd.classList.contains("invalid")) {
+			pwd.classList.remove("invalid");
+		}
+		pwd.classList.add("valid");
+	} else {
+		if (pwd.classList.contains("valid")) {
+			pwd.classList.remove("valid");
+		}
+		pwd.classList.add("invalid");
+	}
+
+	if (value === "") {
+		pwd.classList.remove("invalid");
+		pwd.classList.remove("valid");
+	}
+
+	if (pwd.classList.contains("invalid")) {
+		invalid = true;
+	} else invalid = false;
+}
+
 window.addEventListener("load", () => {
 	form.addEventListener("input", (e) => {
 		if (e.target.id === "firstname") checkName(e.target.value);
 		if (e.target.id === "mail") checkEmail(e.target.value);
+		if (e.target.id === "pwd") checkPwdValidity(e.target.value);
 	});
 });
