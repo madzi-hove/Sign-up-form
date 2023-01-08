@@ -1,9 +1,12 @@
 const image = document.querySelector(".image");
 const content = document.querySelector(".content");
+const textContainer = document.querySelector(".mobile-text-container");
+const mobileText = document.querySelector(".presentation__text");
 const mobileSignUp = document.querySelector(".mobile-sign-up");
 const form = document.querySelector(".form");
 const submitBtn = document.querySelector(".form-submit");
 const pwd = document.querySelector("#pwd");
+const close = document.querySelector(".close-btn");
 
 // validation functions
 
@@ -117,6 +120,24 @@ window.addEventListener("load", () => {
 		if (e.target.id === "mail") checkEmail(e.target.value);
 		if (e.target.id === "pwd") checkPwdValidity(e.target.value);
 		if (e.target.id === "pwd-confirm") checkConfirmPwd(e.target.value);
+	});
+
+	mobileSignUp.addEventListener("click", (e) => {
+		image.classList.add("hidden");
+		textContainer.classList.add("hidden");
+		mobileSignUp.classList.add("hidden");
+		mobileText.classList.add("hidden");
+		content.classList.remove("hidden");
+		close.classList.remove("hidden");
+	});
+
+	close.addEventListener("click", () => {
+		image.classList.remove("hidden");
+		textContainer.classList.remove("hidden");
+		mobileSignUp.classList.remove("hidden");
+		mobileText.classList.remove("hidden");
+		content.classList.add("hidden");
+		// close.classList.add("hidden");
 	});
 
 	submitBtn.addEventListener("click", (e) => {
