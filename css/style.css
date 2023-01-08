@@ -51,7 +51,7 @@ input:required:invalid + span::after {
 	color: white;
 	background-color: black;
 	padding: 4px 10px;
-	top: -0.5rem;
+	top: -0.4rem;
 	right: 0;
 	border-radius: 5px;
 }
@@ -162,6 +162,12 @@ input.valid {
 }
 
 input.invalid {
+	border: 1px solid red;
+}
+
+.strength {
+	display: flex;
+	flex-flow: wrap;
 	border: 1px solid red;
 }
 
