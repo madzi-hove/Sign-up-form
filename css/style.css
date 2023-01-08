@@ -96,6 +96,7 @@ button {
 
 .mobile-text-container {
 	position: absolute;
+	text-align: center;
 	top: 45%;
 	color: #fff;
 	background: rgba(0, 0, 0, 0.5);
@@ -148,11 +149,8 @@ button:hover {
 	display: none;
 }
 
-.presentation__text {
-	text-align: center;
-	max-width: 65%;
-	margin: 0 auto;
-	padding: 1rem;
+.presentation {
+	max-width: 575px;
 }
 
 .form__heading {
@@ -164,7 +162,6 @@ button:hover {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	max-width: 575px;
-	/* margin: 0 auto; */
 	margin-bottom: 1.5rem;
 }
 
@@ -213,11 +210,15 @@ input.invalid {
 		display: none;
 	}
 
+	.presentation {
+		margin: 0 auto;
+	}
+
 	.presentation__text {
 		text-align: center;
 		max-width: 575px;
-		margin: 0 auto;
-		padding: 1rem;
+		padding: 0 1.5rem;
+		margin: 0 0 1rem;
 	}
 
 	.form__heading {
@@ -251,8 +252,13 @@ input.invalid {
 		padding: 2rem;
 	}
 
+	.presentation {
+		width: 85%;
+	}
+
 	.presentation__text {
-		width: 65%;
+		text-align: left;
+		margin: 0 0 1rem;
 	}
 
 	.form {
