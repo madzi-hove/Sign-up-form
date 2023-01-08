@@ -155,6 +155,16 @@ button {
 	margin-bottom: 0.5rem;
 }
 
+/* Validation */
+
+input.valid {
+	border: 1px solid green;
+}
+
+input.invalid {
+	border: 1px solid red;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 414px) {
 	.content {
