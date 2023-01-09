@@ -137,7 +137,7 @@ window.addEventListener("load", () => {
 		mobileSignUp.classList.remove("hidden");
 		mobileText.classList.remove("hidden");
 		content.classList.add("hidden");
-		// close.classList.add("hidden");
+		close.classList.add("hidden");
 	});
 
 	submitBtn.addEventListener("click", (e) => {
