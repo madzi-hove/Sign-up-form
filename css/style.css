@@ -108,7 +108,6 @@ button {
 
 .mobile-text-container p:nth-child(2) {
 	text-align: center;
-	border: 1px solid red;
 }
 
 button:hover {
