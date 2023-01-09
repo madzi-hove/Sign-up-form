@@ -7,6 +7,7 @@ const form = document.querySelector(".form");
 const submitBtn = document.querySelector(".form-submit");
 const pwd = document.querySelector("#pwd");
 const close = document.querySelector(".close-btn");
+let invalid = false;
 
 // validation functions
 
@@ -106,12 +107,19 @@ function checkConfirmPwd(value) {
 	if (value === "") {
 		pwdConfirm.classList.remove("invalid");
 		pwdConfirm.classList.remove("valid");
-		invalid = true;
+	}
+}
+
+// Check for empty inputs
+function inputisEmpty() {
+	if (pwd.value.length === 0) return true;
+	if (username.value.length === 0) return true;
+	if (email.value.length === 0) return true;
+	if (pwdConfirm.classList.contains("invalid")) {
+		return true;
 	}
 
-	if (pwdConfirm.classList.contains("invalid")) {
-		invalid = true;
-	} else invalid = false;
+	return false;
 }
 
 window.addEventListener("load", () => {
@@ -150,6 +158,7 @@ window.addEventListener("load", () => {
 	});
 
 	submitBtn.addEventListener("click", (e) => {
+		invalid = inputisEmpty();
 		if (invalid === true) {
 			e.preventDefault();
 		}
