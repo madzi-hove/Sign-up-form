@@ -108,6 +108,7 @@ button {
 
 .mobile-text-container p:nth-child(2) {
 	text-align: center;
+	border: 1px solid red;
 }
 
 button:hover {
@@ -120,7 +121,7 @@ button:hover {
 	font-weight: 700;
 }
 
-.log-in-text a {
+.form-submit > .log-in-text a {
 	color: #000;
 	text-decoration: none;
 }
@@ -151,6 +152,10 @@ button:hover {
 
 .presentation {
 	max-width: 575px;
+}
+
+.presentation__text {
+	text-align: center;
 }
 
 .form__heading {
