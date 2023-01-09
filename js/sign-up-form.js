@@ -14,7 +14,7 @@ const close = document.querySelector(".close-btn");
 function checkName(value) {
 	console.log(value);
 	const username = document.querySelector("#firstname");
-	const pattern = /^\w{5,15}/;
+	const pattern = /^\w{1,15}/;
 
 	if (value.match(pattern)) {
 		if (username.classList.contains("invalid")) {
@@ -129,6 +129,15 @@ window.addEventListener("load", () => {
 		mobileText.classList.add("hidden");
 		content.classList.remove("hidden");
 		close.classList.remove("hidden");
+
+		window.addEventListener("resize", () => {
+			console.log("resize");
+			if (Number(window.innerWidth) > 414) {
+				close.classList.add("hidden");
+			} else {
+				close.classList.remove("hidden");
+			}
+		});
 	});
 
 	close.addEventListener("click", () => {
