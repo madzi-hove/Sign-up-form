@@ -49,7 +49,7 @@ input:required:invalid + span::after {
 	position: absolute;
 	content: "required";
 	color: white;
-	background-color: black;
+	background-color: rgb(89, 109, 72);
 	padding: 4px 10px;
 	top: -0.4rem;
 	right: 0;
@@ -158,6 +158,7 @@ button:hover {
 }
 
 .form__heading {
+	color: rgb(89, 109, 72);
 	text-align: center;
 }
 
@@ -226,6 +227,7 @@ input.invalid {
 	}
 
 	.form__heading {
+		color: #000;
 		text-align: center;
 	}
 
@@ -270,6 +272,10 @@ input.invalid {
 		flex-direction: column;
 		margin: 0;
 		min-width: 65%;
+	}
+
+	.form__heading {
+		color: #000;
 	}
 
 	.section {
